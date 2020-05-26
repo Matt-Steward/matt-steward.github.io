@@ -31,13 +31,16 @@
     </header>
     
     <nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-		</nav>
+         {% if site.logo %}
+             <img src="{{ full_base_url }}/{{ site.logo }}" class="site-logo" width="auto" height="56">
+         {% endif %}
+	 <ul>
+	     <li><a href="/">Home</a></li>
+	     <li><a href="/about">About</a></li>
+	     <li><a href="/cv">CV</a></li>
+	     <li><a href="/blog">Blog</a></li>
+	  </ul>
+     </nav>
 
     <div class="container">
       <section id="main_content">
