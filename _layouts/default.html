@@ -13,10 +13,12 @@
 
     <header>
       <div class="container">
+        <h1>SITE UNDER CONSTRUCTION</h1>
+        
         <a id="a-title" href="{{ '/' | relative_url }}">
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
+          <h2>{{ site.title | default: site.github.repository_name }}</h2>
         </a>
-        <h1>{{ site.description | default: site.github.project_tagline }}</h1>
+        <h2>{{ site.description | default: site.github.project_tagline }}</h2>
 
         <section id="downloads">
           {% if site.show_downloads %}
@@ -27,6 +29,15 @@
         </section>
       </div>
     </header>
+    
+    <nav>
+	    		<ul>
+	        		<li><a href="/">Home</a></li>
+		        	<li><a href="/about">About</a></li>
+	        		<li><a href="/cv">CV</a></li>
+	        		<li><a href="/blog">Blog</a></li>
+	    		</ul>
+		</nav>
 
     <div class="container">
       <section id="main_content">
