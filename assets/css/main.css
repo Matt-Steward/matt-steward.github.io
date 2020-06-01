@@ -1,0 +1,264 @@
+
+/*
+
+* {
+    border-width: 1px;
+    border-color: yellow;
+    border-style: dashed;
+}
+
+*/
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    background-color: black;
+    color: rgba(255,176,0,0.75);
+    
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.125em;
+}
+
+header h1, header h2, header img {
+    
+    margin: 5px 5px 5px 5px;
+    text-align: left;
+    height: 50px;
+}
+
+header h2 {
+    text-align: right;
+    
+}
+
+
+.main {
+    display: grid;
+    grid-template-columns: 110px auto;
+    grid-template-rows: 70px 100px auto 50px;
+    grid-template-areas: 
+        "header header"
+        "headline headline"
+        "nav content"
+        "footer footer";
+    
+}
+
+
+.main, header, aside#headline, nav, section#content, footer  {
+    
+    margin: 5px 5px 5px 5px;
+    
+}
+
+header {
+    
+    grid-area: header;
+    display: grid;
+    grid-template-columns: auto 20% 60px;
+    background-color: rgb(25, 25, 25);
+}
+
+aside#headline {
+    grid-area: headline;
+    background-color: rgb(25, 25, 25);
+}
+
+aside#headline h3 {
+    padding-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+aside#headline ul, article#blog ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 10px;
+    
+}
+
+aside#headline ul li, article#blog ul li {
+    background-image: url(../images/blog-3.png);
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    margin: 0;
+    
+}
+
+aside#headline a, article#blog a {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+aside#headline a:link, article#blog a:link {
+    text-decoration: none;
+    color: rgba(255,176,0,0.75);
+}
+
+aside#headline a:hover, article#blog a:hover {
+    color: rgba(255,176,0,1);
+}
+
+aside#headline a:visited, article#blog a:visited {
+    color: rgba(255,176,0,0.5);
+}
+
+nav {
+    grid-area: nav;
+    display: grid;
+    grid-template-rows: repeat(3,45px);
+}
+
+nav>a {
+    color: rgba(255,176,0,0.75);
+}
+
+nav>a>div.selected {
+    background-color: rgb(25, 25, 25);
+}
+
+nav>a {
+    text-decoration: none;
+}
+
+nav>a:hover {
+    color: rgba(255,176,0,1);
+}
+
+
+nav>a>div {
+    
+    height: 30px;
+    padding: 10px 0px 5px 10px;
+    
+}
+
+section#content {
+    grid-area: content;
+    background-color: rgb(25, 25, 25);
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgb(25, 25, 25);
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    text-align: center;
+}
+
+footer>a {
+    color: rgba(255,176,0,0.75);
+}
+
+footer>a {
+    text-decoration: none;
+}
+
+footer>a:hover {
+    color: rgba(255,176,0,1);
+}
+
+nav>a>div {
+    
+    height: 30px;
+    padding: 10px 0px 5px 10px;
+    
+}
+
+article {
+    padding: 0px 0px 5px 5px;
+    margin: 0 0;
+    
+}
+
+article>h1, article>h2, article>h3 {
+    margin-top: 0;
+}
+
+article>p {
+    margin-top: 0;
+    
+}
+
+article a {
+    color: rgba(255,176,0,0.75);
+}
+
+article a:hover {
+    color: rgba(255,176,0,1);
+}
+
+
+@media screen and (max-width: 60em) {
+    aside#headline {
+        display: none;
+    }
+
+    header img#profilePic {
+        display: none;
+    }
+
+    header h2#siteAuthor {
+        display: none;
+    }
+
+    header {
+        grid-template-columns: auto;
+    }
+
+    .main {
+        grid-template-columns: 110px auto;
+        grid-template-rows: repeat(3,auto);
+        grid-template-areas: 
+        "header header"
+        "nav content"
+        "footer footer";
+    }
+}
+
+@media screen and (max-width: 30em) {
+    aside#headline {
+        display: none;
+    }
+
+    header img#profilePic {
+        display: none;
+    }
+
+    header h2#siteAuthor {
+        display: none;
+    }
+
+    header {
+        grid-template-columns: auto;
+    }
+
+    header h1 {
+        
+        height: 100px;
+    }
+
+    .main {
+        grid-template-columns: auto;
+        grid-template-rows: 120px auto 50px 50px;
+        grid-template-rows: repeat(4,auto);
+        grid-template-areas: 
+        "header"
+        "content"
+        "nav"
+        "footer";
+    }
+}
