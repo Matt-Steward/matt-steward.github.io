@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
 
 /*
 
@@ -7,7 +18,7 @@
     border-style: dashed;
 }
 
-*/
+
 
 body {
     font-family: 'Courier New', Courier, monospace;
@@ -16,6 +27,8 @@ body {
     color: rgba(255,176,0,0.75);
     
 }
+
+*/
 
 h1 {
     font-size: 2em;
@@ -66,18 +79,26 @@ header {
     grid-area: header;
     display: grid;
     grid-template-columns: auto 20% 60px;
-    background-color: rgb(25, 25, 25);
+    background-color: lightseagreen;
+    color: white;
+}
+
+header>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 15%;
 }
 
 aside#headline {
     grid-area: headline;
-    background-color: rgb(25, 25, 25);
+    background-color: rgba(32,178,170,0.5);
 }
 
 aside#headline h3 {
     padding-left: 10px;
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
+    color: grey;
 }
 
 aside#headline ul, article#blog ul {
@@ -102,15 +123,16 @@ aside#headline a, article#blog a {
 
 aside#headline a:link, article#blog a:link {
     text-decoration: none;
-    color: rgba(255,176,0,0.75);
+    color: grey;
 }
 
 aside#headline a:hover, article#blog a:hover {
-    color: rgba(255,176,0,1);
+    font-weight: 525;
+    
 }
 
 aside#headline a:visited, article#blog a:visited {
-    color: rgba(255,176,0,0.5);
+    color: grey;
 }
 
 nav {
@@ -120,11 +142,12 @@ nav {
 }
 
 nav>a {
-    color: rgba(255,176,0,0.75);
+    color: grey;
 }
 
 nav>a>div.selected {
-    background-color: rgb(25, 25, 25);
+    background-color: rgba(32,178,170,0.5);
+    color: white;
 }
 
 nav>a {
@@ -132,7 +155,8 @@ nav>a {
 }
 
 nav>a:hover {
-    color: rgba(255,176,0,1);
+    color: grey;
+    font-weight: 600;
 }
 
 
@@ -145,12 +169,17 @@ nav>a>div {
 
 section#content {
     grid-area: content;
-    background-color: rgb(25, 25, 25);
+    background-color: white;
+    min-height: 550px;
+}
+
+section#content h3 {
+    color: grey;
 }
 
 footer {
     grid-area: footer;
-    background-color: rgb(25, 25, 25);
+    background-color: rgba(32,178,170,0.5);
 }
 
 footer {
@@ -160,7 +189,7 @@ footer {
 }
 
 footer>a {
-    color: rgba(255,176,0,0.75);
+    color: whitesmoke;
 }
 
 footer>a {
@@ -168,7 +197,8 @@ footer>a {
 }
 
 footer>a:hover {
-    color: rgba(255,176,0,1);
+    color: white;
+    font-weight: 600;
 }
 
 nav>a>div {
@@ -194,11 +224,12 @@ article>p {
 }
 
 article a {
-    color: rgba(255,176,0,0.75);
+    color: blue;
 }
 
 article a:hover {
-    color: rgba(255,176,0,1);
+    color: darkblue;
+    
 }
 
 
