@@ -58,7 +58,7 @@ header h2 {
 .main {
     display: grid;
     grid-template-columns: 110px auto;
-    grid-template-rows: 70px 100px auto 50px;
+    grid-template-rows: 70px 120px auto 50px;
     grid-template-areas: 
         "header header"
         "headline headline"
