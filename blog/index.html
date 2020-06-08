@@ -5,9 +5,8 @@ title: Blog
 <article id="blog">
 	<h3>{{ page.title }}</h3>
 	<ul>
-		{% assign posts = site.posts | where_exp: "item", "item.tags contains 'C#'" %}
 		
-		{% for post in posts %}
+		{% for post in site.posts %}
 		<li>
 			<a href="{{ post.url }}" title="{{ post.title }}">
 				{{ post.date | date_to_string }} - {{ post.title }}
